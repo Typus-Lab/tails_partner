@@ -10,6 +10,7 @@ module typus_dov::tails_staking {
     use typus_dov::typus_dov_single::Registry;
     use typus_nft::typus_nft::{Tails, ManagerCap as NftManagerCap};
 
+    #[allow(unused_field)]
     struct NftExtension has key, store {
         id: UID,
         nft_table: ObjectTable<address, Tails>,
@@ -18,12 +19,14 @@ module typus_dov::tails_staking {
         fee: Balance<SUI>,
     }
 
+    #[allow(unused_field)]
     struct Partner has key, store {
         id: UID,
         exp_allocation: u64,
         partner_traits: VecMap<String, String>,
     }
 
+    #[allow(unused_field)]
     struct PartnerKey has key, store {
         id: UID,
         for: ID,

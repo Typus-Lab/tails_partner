@@ -15,6 +15,7 @@ module typus_dov::typus_dov_single {
 
     struct TYPUS_DOV_SINGLE has drop {}
 
+    #[allow(unused_field)]
     struct Registry has key {
         id: UID,
         num_of_vault: u64,
@@ -30,6 +31,7 @@ module typus_dov::typus_dov_single {
         transaction_suspended: bool,
     }
 
+    #[allow(unused_field)]
     struct PortfolioVault has key, store {
         id: UID,
         info: Info,
@@ -37,6 +39,7 @@ module typus_dov::typus_dov_single {
         authority: Authority,
     }
 
+    #[allow(unused_field)]
     struct Info has copy, drop, store {
         index: u64,
         option_type: u64, // 0: Call, 1: Put, 2: CallSpread, 3: PutSpread, 4: CallButterfly, 5: PutButterfly
@@ -63,6 +66,7 @@ module typus_dov::typus_dov_single {
         bcs_padding: vector<u8>,
     }
 
+    #[allow(unused_field)]
     struct Config has copy, drop, store {
         oracle_id: address,
         deposit_lot_size: u64,
@@ -90,6 +94,7 @@ module typus_dov::typus_dov_single {
         bcs_padding: vector<u8>,
     }
 
+    #[allow(unused_field)]
     struct PayoffConfig has copy, drop, store {
         strike_bp: u64,
         weight: u64,
@@ -98,6 +103,7 @@ module typus_dov::typus_dov_single {
         u64_padding: vector<u64>,
     }
 
+    #[allow(unused_field)]
     struct VaultConfig has copy, drop, store {
         payoff_configs: vector<PayoffConfig>,
         strike_increment: u64,
@@ -107,11 +113,13 @@ module typus_dov::typus_dov_single {
         u64_padding: vector<u64>,
     }
 
+    #[allow(unused_field)]
     struct OracleInfo has copy, drop, store {
         price: u64,
         decimal: u64,
     }
 
+    #[allow(unused_field)]
     struct DeliveryInfos has copy, drop, store {
         round: u64,
         max_size: u64,
@@ -124,6 +132,7 @@ module typus_dov::typus_dov_single {
         u64_padding: vector<u64>,
     }
 
+    #[allow(unused_field)]
     struct DeliveryInfo has copy, drop, store {
         auction_type: u64, // 0: dutch, 1: otc
         delivery_price: u64,
@@ -136,6 +145,7 @@ module typus_dov::typus_dov_single {
         u64_padding: vector<u64>,
     }
 
+    #[allow(unused_field)]
     struct SettlementInfo has copy, drop, store {
         round: u64,
         oracle_price: u64,
