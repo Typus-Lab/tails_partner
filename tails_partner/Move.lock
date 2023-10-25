@@ -2,7 +2,7 @@
 
 [move]
 version = 0
-manifest_digest = "6C8A75C8A66FE5E9F92C0D9840B94844F8DF622428C6DC7E7DADD47B98C50AEE"
+manifest_digest = "EBF1E95B0FF15C94E66C18B368662050D77638E843BE1F3C74B4E2026BC4E069"
 deps_digest = "060AD7E57DFB13104F21BE5F5C3759D03F0553FC3229247D9A7A6B45F50D03A3"
 
 dependencies = [
@@ -13,7 +13,7 @@ dependencies = [
 
 [[move.package]]
 name = "Kiosk"
-source = { git = "git@github.com:Typus-Lab/typus-nft.git", rev = "main", subdir = "kiosk_rules" }
+source = { git = "git@github.com:Typus-Lab/typus-nft.git", rev = "testnet", subdir = "kiosk_rules" }
 
 dependencies = [
   { name = "Sui" },
@@ -24,11 +24,37 @@ name = "MoveStdlib"
 source = { git = "https://github.com/MystenLabs/sui.git", rev = "mainnet", subdir = "crates/sui-framework/packages/move-stdlib" }
 
 [[move.package]]
+name = "Pyth"
+source = { git = "https://github.com/WayneAl/pyth-crosschain.git", rev = "368d42b9", subdir = "target_chains/sui/contracts" }
+
+dependencies = [
+  { name = "Sui" },
+  { name = "Wormhole" },
+]
+
+[[move.package]]
 name = "Sui"
 source = { git = "https://github.com/MystenLabs/sui.git", rev = "mainnet", subdir = "crates/sui-framework/packages/sui-framework" }
 
 dependencies = [
   { name = "MoveStdlib" },
+]
+
+[[move.package]]
+name = "SwitchboardStdLib"
+source = { git = "https://github.com/WayneAl/sui-sdk.git", rev = "main", subdir = "move/testnet/switchboard_std" }
+
+dependencies = [
+  { name = "MoveStdlib" },
+  { name = "Sui" },
+]
+
+[[move.package]]
+name = "Wormhole"
+source = { git = "https://github.com/wayneAl/wormhole.git", rev = "testnet", subdir = "sui/wormhole" }
+
+dependencies = [
+  { name = "Sui" },
 ]
 
 [[move.package]]
@@ -39,6 +65,7 @@ dependencies = [
   { name = "Sui" },
   { name = "typus_framework" },
   { name = "typus_nft" },
+  { name = "typus_oracle" },
 ]
 
 [[move.package]]
@@ -51,9 +78,19 @@ dependencies = [
 
 [[move.package]]
 name = "typus_nft"
-source = { git = "git@github.com:Typus-Lab/typus-nft.git", rev = "main", subdir = "typus_nft" }
+source = { git = "git@github.com:Typus-Lab/typus-nft.git", rev = "testnet", subdir = "typus_nft" }
 
 dependencies = [
   { name = "Kiosk" },
   { name = "Sui" },
+]
+
+[[move.package]]
+name = "typus_oracle"
+source = { git = "https://github.com/Typus-Lab/typus-oracle.git", rev = "testnet", subdir = "oracle" }
+
+dependencies = [
+  { name = "Pyth" },
+  { name = "Sui" },
+  { name = "SwitchboardStdLib" },
 ]
