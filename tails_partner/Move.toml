@@ -1,0 +1,13 @@
+[package]
+name = "tails_partner"
+version = "1.0.0"
+published-at = "0x0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
+typus_nft = { git = "git@github.com:Typus-Lab/typus-nft.git", subdir = "typus_nft", rev = "main" }
+typus_dov = { local = "../typus_dov_single" }
+
+[addresses]
+tails_partner = "0x0"
+sui = "0x2"
