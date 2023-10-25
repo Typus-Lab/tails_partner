@@ -1,13 +1,13 @@
 [package]
 name = "tails_partner"
 version = "1.0.0"
-published-at = "0x95c958ce771ea5f72e21e443a09dcb8c5ff0e74682c95b5632987039c17c1bed"
+published-at = "0x0"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
-typus_nft = { git = "git@github.com:Typus-Lab/typus-nft.git", subdir = "typus_nft", rev = "testnet" }
+typus_nft = { git = "git@github.com:Typus-Lab/typus-nft.git", subdir = "typus_nft", rev = "mainnet" }
 typus_dov = { local = "../typus_dov_single" }
 
 [addresses]
-tails_partner = "0x95c958ce771ea5f72e21e443a09dcb8c5ff0e74682c95b5632987039c17c1bed"
+tails_partner = "0x0"
 sui = "0x2"

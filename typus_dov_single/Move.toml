@@ -1,15 +1,15 @@
 [package]
 name = "typus_dov"
 version = "2.15.0"
-published-at = "0x4fdaa4fd439b29cae2791651b853575a110ee9c939f2034c06ce8ddd7ffdf8ed"
+published-at = "0x321848bf1ae327a9e022ccb3701940191e02fa193ab160d9c0e49cd3c003de3a"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
 typus_framework = { local = "../typus_framework" }
-typus_nft = { git = "git@github.com:Typus-Lab/typus-nft.git", subdir = "typus_nft", rev = "testnet" }
-typus_oracle = { git = "https://github.com/Typus-Lab/typus-oracle.git", subdir = "oracle", rev = "testnet" }
+typus_nft = { git = "git@github.com:Typus-Lab/typus-nft.git", subdir = "typus_nft", rev = "mainnet" }
+typus_oracle = { git = "https://github.com/Typus-Lab/typus-oracle.git", subdir = "oracle", rev = "mainnet" }
 
 [addresses]
-typus_dov = "0x26b9eae10eb4596b9ab946949684b2e05dc89af51865b7a26c151834b0574f78"
+typus_dov = "0x321848bf1ae327a9e022ccb3701940191e02fa193ab160d9c0e49cd3c003de3a"
 sui = "0x2"
 fee_pool_address = "0x603272d1e61de086a18751482684f882642eb080144aee425c4c34b5e56470b0"

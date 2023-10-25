@@ -1,11 +1,11 @@
 [package]
 name = "typus_framework"
 version = "2.0.0"
-published-at = "0xf615f331abf1b3841ea5f93917520e1566f66243ed7dce1424369721ec16f718"
+published-at = "0xb4f25230ba74837d8299e92951306100c4a532e8c48cc3d8828abe9b91c8b274"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "mainnet" }
 
 [addresses]
-typus_framework = "0x850a30d27aeb7ecc8c09dee676792813355df043420138fe28fae79412e8d4e9"
+typus_framework = "0xb4f25230ba74837d8299e92951306100c4a532e8c48cc3d8828abe9b91c8b274"
 sui = "0x2"
