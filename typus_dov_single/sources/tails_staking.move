@@ -39,7 +39,33 @@ module typus_dov::tails_staking {
         _owner: address,
         _exp: u64,
     ) {
-        // ...
+        // typus_dov_single::version_check(registry);
+        // // E_INVALID_REGISTRY if not exists
+        // assert!(dynamic_field::exists_(registry_uid(registry), b"nft_extension"), E_INVALID_REGISTRY);
+        // let nft_extension: &mut NftExtension = dynamic_field::borrow_mut(registry_mut_uid(registry), b"nft_extension");
+        // let nft_table = &mut nft_extension.nft_table;
+
+        // let partner_mut: &mut Partner = dynamic_field::borrow_mut(&mut nft_extension.id, partner_key.partner);
+        // assert!(&partner_key.for == object::borrow_id(partner_mut), E_KEY_MISMATCH);
+
+        // if (object_table::contains(nft_table, owner)) {
+        //     let nft = object_table::borrow_mut<address, Tails>(nft_table, owner);
+
+        //     let keys = vec_map::keys(&partner_mut.partner_traits);
+        //     let attributes = typus_nft::tails_attributes(nft);
+
+        //     let pass = true;
+        //     while (vector::length(&keys) > 0) {
+        //         let key = vector::pop_back(&mut keys);
+        //         let value = vec_map::get(&partner_mut.partner_traits, &key);
+        //         let attribute = vec_map::get(&attributes, &key);
+        //         if (attribute != value) { pass = false };
+        //     };
+        //     if (pass) {
+        //         typus_nft::nft_exp_up(&nft_extension.nft_manager_cap, nft, exp);
+        //         partner_mut.exp_allocation = partner_mut.exp_allocation - exp;
+        //     }
+        // }
     }
 
     // Helper Functions
